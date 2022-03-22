@@ -38,7 +38,8 @@
   flex-direction: column;
   align-items: center;
 }
-.blogCreateForm form input {
+.blogCreateForm form input,
+.blogCreateForm form textarea {
   border: none;
   width: 100%;
   margin-bottom: 1rem;
@@ -46,16 +47,18 @@
   border-bottom: 1px solid transparent;
   padding: 6px 0;
 }
-.blogCreateForm form input:focus {
+.blogCreateForm form input:focus,
+.blogCreateForm form textarea:focus {
   border-bottom: 1px solid #727272;
   outline: none;
 }
 .blogCreateForm form input:first-child {
   font-size: 28px;
 }
-.blogCreateForm form input {
+.blogCreateForm form textarea {
   font-size: 18px;
   line-height: 22px;
+  font-family: "Helvetica Neue";
 }
 .blogCreateForm form button {
   padding: 8px 20px;

@@ -25,7 +25,9 @@ function App() {
     dispatch(postBlogAsync());
   };
 
-  const onInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+  const onInputChange = (
+    e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     let { name, value } = e.currentTarget;
 
     dispatch(updateBlogForm({ ...blogFormData, [name]: value }));

@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import Card from "../Card";
 import Button from "../Button";
 import "./Blog.css";
@@ -6,7 +6,9 @@ import { BlogForm } from "../../app/slices/Blog.slice";
 
 interface Props {
   onSubmit: (e: React.FormEvent<HTMLButtonElement>) => void;
-  onInputChange: (e: React.FormEvent<HTMLInputElement>) => void;
+  onInputChange: (
+    e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
   data: BlogForm;
 }
 export const BlogCreateForm: FC<Props> = (props) => {
@@ -24,8 +26,7 @@ export const BlogCreateForm: FC<Props> = (props) => {
             onChange={onInputChange}
             required
           />
-          <input
-            type="text"
+          <textarea
             name="content"
             placeholder="Content"
             value={data.content}
